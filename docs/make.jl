@@ -16,7 +16,8 @@ using Documenter, DocStringExtensions, LatinSyntax
 makedocs(
     sitename = "LatinSyntax.jl Documentation",
     pages = [
-        "Home" => "index.md"
+        "Home" => "index.md",
+        "Modeling Latin syntax" => "model.md"
     ]
 )
 
