@@ -1,5 +1,6 @@
 module LatinSyntax
+using CitableText
 
-greet() = print("Hello World!")
+include("verbalunit.jl")
 
 end # module LatinSyntax
