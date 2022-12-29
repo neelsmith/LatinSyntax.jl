@@ -17,6 +17,7 @@ makedocs(
     sitename = "LatinSyntax.jl Documentation",
     pages = [
         "Home" => "index.md",
+        "The package" => "implementation.md",
         "Modeling Latin syntax" => "model.md"
     ]
 )
