@@ -11,5 +11,6 @@
         sents = parsesentences(c, latin23())
         @test length(sents) == 5
         @test map(s -> s.sequence, sents) == [1,2,3,4,5]
-
+        @test sents[1].tokenrange == CtsUrn("urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.1.1-108a.1.28a")
+        @test sents[end].tokenrange == CtsUrn("urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.2.21-108a.2.32a")
 end
