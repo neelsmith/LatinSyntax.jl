@@ -29,7 +29,7 @@ function parsesentences(c, ortho::T; terminators = [".", ":", ";"]) where T <: O
             end
         	rangeu = addpassage(currenttext, string(rangeopener, "-", 	passagecomponent(n[1].urn)))
             push!(sentencelist,  SentenceAnalysis(rangeu, sentencecount))
-	        #push!(sentenceurls, rangeu)
+	        rangeopener = ""
 
 			
 	    else

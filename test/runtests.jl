@@ -1,6 +1,6 @@
 using LatinSyntax
-using CitableCorpus, CitableBase
-using Orthography
+using CitableCorpus, CitableBase, CitableText
+using Orthography, LatinOrthography
 using Test
 
 include("test_sentences.jl")
