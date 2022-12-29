@@ -33,7 +33,10 @@ f = joinpath(repo, "test", "data", "hyginus.cex")
 c = fromcex(f, CitableTextCorpus, FileReader)
 
 # ╔═╡ 7f9fd244-f16b-47fe-8dd8-12e06152b733
-parsesentences(c, latin23())
+sentences = parsesentences(c, latin23())
+
+# ╔═╡ 3fa5b051-b4ba-48c7-a757-691bf7174073
+typeof(sentences)
 
 # ╔═╡ Cell order:
 # ╟─d3d708ea-5a63-4c9e-9fc2-6801ada726e0
@@ -42,3 +45,4 @@ parsesentences(c, latin23())
 # ╟─d12ab940-f56a-49e0-bedf-b341f2124bc5
 # ╠═059b137a-a5ff-4b9e-935b-b00effdf0a9f
 # ╠═7f9fd244-f16b-47fe-8dd8-12e06152b733
+# ╠═3fa5b051-b4ba-48c7-a757-691bf7174073

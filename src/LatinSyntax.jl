@@ -7,5 +7,5 @@ include("sentences.jl")
 include("verbalunit.jl")
 include("token.jl")
 
-export parsesentences
+export SentenceAnalysis, parsesentences
 end # module LatinSyntax
