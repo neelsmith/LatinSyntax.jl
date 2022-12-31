@@ -23,7 +23,7 @@ function token(s; delimiter = "|")
 	node1relation = parts[6] == "nothing" || isempty(parts[6]) ? nothing : parts[6]
 	node2 = parts[7] == "nothing" || isempty(parts[7]) ? nothing : parts[7]
 	node2relation = parts[8] == "nothing" || isempty(parts[8]) ? nothing : parts[8]
-	TokenAnnotation(urn,
+	TokenAnalysis(urn,
 		ttype,
 		txt,
 		vu,
@@ -33,6 +33,7 @@ function token(s; delimiter = "|")
 		node2relation
 	)
 end
+
 
 function validatetokentype(s)
 	s

@@ -8,13 +8,6 @@
 end
 
 #=
-    sentence::CtsUrn
-	id
-	syntactic_type
-	semantic_type
-	depth::Int
-=#
-#=
 
 Achiui cum per decem annos Troiam capere non possent, Epeus monitu Mineruae equum mirae magnitudinis ligneum fecit, eo-que sunt collecti Menelaus Ulixes Diomedes Thessander Sthenelus Acamas Thoas Machaon Neoptolemus; et in equo scripserunt DANAI MINERUAE DONO DANT, castra-que transtulerunt Tenedo.
 =#
