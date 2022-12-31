@@ -11,6 +11,8 @@ include("verbalunit.jl")
 include("token.jl")
 
 export SentenceAnalysis, parsesentences, sentence
+export VerbalUnitAnalysis, verbalunit
+
 export delimited
 
 end # module LatinSyntax
