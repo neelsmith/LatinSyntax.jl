@@ -22,7 +22,9 @@ function delimited(ta::TokenAnalysis; delimiter = "|")
 end
 
 
-function delimited(v::Vector{TokenAnalysis}; delimiter = "|")
+function delimited(vect::Vector{TokenAnalysis}; delimiter = "|")
+	hdr = "urn$(delimiter)tokentype$(delimiter)text$(delimiter)verbalunit$(delimiter)node1$(delimiter)node1relation$(delimiter)node2$(delimiter)node2relation\n"
+	hdr * join(map(tkn -> delimited(tkn), vect), "\n") * "\n"
 end
 
 
