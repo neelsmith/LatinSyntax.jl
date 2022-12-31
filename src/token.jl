@@ -10,6 +10,22 @@ struct TokenAnalysis
 end
 
 
+function delimited(ta::TokenAnalysis; delimiter = "|")
+	string(ta.urn, delimiter,
+	ta.tokentype, delimiter,
+	ta.text, delimiter,
+	ta.verbalunit, delimiter,
+	ta.node1, delimiter,
+	ta.node1relation, delimiter,
+	ta.node2, delimiter,
+	ta.node2relation)
+end
+
+
+function delimited(v::Vector{TokenAnalysis}; delimiter = "|")
+end
+
+
 function token(s; delimiter = "|")
 	parts = split(s, delimiter)
 	if length(parts)!= 8
@@ -37,11 +53,4 @@ end
 
 function validatetokentype(s)
 	s
-end
-
-function delimited(ta::TokenAnalysis; delimiter = "|")
-end
-
-
-function delimited(v::Vector{TokenAnalysis}; delimiter = "|")
 end
