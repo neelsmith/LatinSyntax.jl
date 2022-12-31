@@ -3,6 +3,25 @@ struct SentenceAnalysis
     sequence::Int
 end
 
+
+"""Compose delimited-text representation of a `SentenceAnalysis`.
+$(SIGNATURES)
+"""
+function delimited(sa::SentenceAnalysis; delimiter = "|")
+    string(sa.tokenrange,delimiter,sa.sequence)
+end
+
+
+
+"""Compose delimited-text representation of a vector of `SentenceAnalysis`s.
+$(SIGNATURES)
+"""
+function delimited(sentlist::Vector{SentenceAnalysis}; delimiter = "|")
+	hdr = "sentence|sequence\n"
+	hdr * join(map(s -> delimited(s), sentlist), "\n") * "\n" 
+end
+
+
 """Tokenize corpus `c` using orthography `ortho`, and group the tokens into sentence units.
 """
 function parsesentences(c, ortho::T; terminators = [".", ":", ";"]) where T <: OrthographicSystem
