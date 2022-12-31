@@ -32,7 +32,7 @@ end
 
 function delimited(vua::VerbalUnitAnalysis; delimiter = "|")
 	string(vua.sentence, delimiter, 
-	vua.id,delimiter,vua.syntacic_type, delimiter, 
+	vua.id,delimiter,vua.syntactic_type, delimiter, 
 	vua.semantic_type, delimiter,
 	vua.depth)
 end
