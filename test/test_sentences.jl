@@ -14,3 +14,9 @@
         @test sents[1].tokenrange == CtsUrn("urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.1.1-108a.1.28a")
         @test sents[end].tokenrange == CtsUrn("urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.2.21-108a.2.32a")
 end
+
+@testset "Test parsing a SentenceAnalysis from delimited source" begin
+        src = "urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.1.1-108a.1.28a|1"
+        sa = sentence(src)
+        @test sa isa SentenceAnalysis
+end
