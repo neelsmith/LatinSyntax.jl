@@ -37,3 +37,8 @@ function delimited(vua::VerbalUnitAnalysis; delimiter = "|")
 	vua.depth)
 end
 
+
+function delimited(vect::Vector{VerbalUnitAnalysis}; delimiter = "|")
+	hdr = "sentence$(delimiter)vuid$(delimiter)syntactic_type$(delimiter)semantic_type$(delimiter)depth$(delimiter)sentence\n"
+	hdr * join(map(vu -> delimited(vu), vulist), "\n") * "\n"
+end

@@ -12,6 +12,7 @@ include("token.jl")
 
 export SentenceAnalysis, parsesentences, sentence
 export VerbalUnitAnalysis, verbalunit
+export TokenAnalysis, token
 
 export delimited
 
