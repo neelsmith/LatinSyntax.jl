@@ -3,6 +3,39 @@ struct SentenceAnalysis
     sequence::Int
 end
 
+"""Construct a `SentenceAnalysis` object from delimited-text representation.
+$(SIGNATURES)
+"""
+function sentence(s; delimiter = "|")
+    parts = split(s, delimiter)
+    if length(parts) != 2
+        @error("Bad syntax for delimited line $(s)")
+    else
+        rng = CtsUrn(parts[1])
+        seq = parse(Int, parts[2])
+        SentenceAnalysis(rng, seq)
+    end
+end
+
+
+"""Compose delimited-text representation of a `SentenceAnalysis`.
+$(SIGNATURES)
+"""
+function delimited(sa::SentenceAnalysis; delimiter = "|")
+    string(sa.tokenrange,delimiter,sa.sequence)
+end
+
+
+
+"""Compose delimited-text representation of a vector of `SentenceAnalysis`s.
+$(SIGNATURES)
+"""
+function delimited(sentlist::Vector{SentenceAnalysis}; delimiter = "|")
+	hdr = "sentence|sequence\n"
+	hdr * join(map(s -> delimited(s), sentlist), "\n") * "\n" 
+end
+
+
 """Tokenize corpus `c` using orthography `ortho`, and group the tokens into sentence units.
 """
 function parsesentences(c, ortho::T; terminators = [".", ":", ";"]) where T <: OrthographicSystem
