@@ -1,8 +1,12 @@
 module LatinSyntax
 using GreekSyntax
+import GreekSyntax: sentence
+import GreekSyntax: verbalunit
+import GreekSyntax: token
 using CitableText
 using CitableCorpus
 using Orthography, LatinOrthography
+
 
 using Documenter
 using DocStringExtensions

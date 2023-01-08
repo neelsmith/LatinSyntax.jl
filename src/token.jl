@@ -1,4 +1,4 @@
-function token(s; delimiter = "|")
+function token(s, ortho::T; delimiter = "|") where T <: LatinOrthographicSystem
 	parts = split(s, delimiter)
 	if length(parts)!= 8
 		@error("Invalid syntax for delimited line $(s)")
