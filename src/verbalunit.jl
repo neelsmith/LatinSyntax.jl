@@ -1,23 +1,15 @@
-struct VerbalUnitAnalysis
-    sentence::CtsUrn
-	id
-	syntactic_type
-	semantic_type
-	depth::Int
-end
 
-
-function verbalunit(s; delimiter = "|")
+function verbalunit(s, ortho::T; delimiter = "|") where T <: LatinOrthographicSystem
 	parts = split(s, delimiter)
 	if length(parts) != 5
 		@error("Bad syntax to delimited line $(s)")
 	else
-		sentence = CtsUrn(parts[1])
-		id = parts[2]
-		syntype = validatesyntactictype(parts[3])
-		semtype = validatesemantictype(parts[4])
-		depth = parse(Int, parts[5])
-		VerbalUnitAnalysis(sentence, id, syntype, semtype, depth)
+		sentence = CtsUrn(parts[5])
+		id = parts[1]
+		syntype = validatesyntactictype(parts[2])
+		semtype = validatesemantictype(parts[3])
+		depth = parse(Int, parts[4])
+		VerbalUnitAnnotation(id, syntype, semtype, depth, sentence)
 	end
 end
 
@@ -29,16 +21,3 @@ function validatesemantictype(s)
 	s
 end
 
-
-function delimited(vua::VerbalUnitAnalysis; delimiter = "|")
-	string(vua.sentence, delimiter, 
-	vua.id,delimiter,vua.syntactic_type, delimiter, 
-	vua.semantic_type, delimiter,
-	vua.depth)
-end
-
-
-function delimited(vect::Vector{VerbalUnitAnalysis}; delimiter = "|")
-	hdr = "sentence$(delimiter)vuid$(delimiter)syntactic_type$(delimiter)semantic_type$(delimiter)depth$(delimiter)sentence\n"
-	hdr * join(map(vu -> delimited(vu), vulist), "\n") * "\n"
-end

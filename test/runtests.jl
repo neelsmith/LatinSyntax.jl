@@ -1,4 +1,5 @@
 using LatinSyntax
+using GreekSyntax
 using CitableCorpus, CitableBase, CitableText
 using Orthography, LatinOrthography
 using Test
