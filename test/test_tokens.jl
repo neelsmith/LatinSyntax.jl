@@ -1,7 +1,7 @@
 @testset "Test delimited representation of tokens" begin
     src = "urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.1.1|lexical|Achiui|108a.1.1-108a.1.28a.9|9|subject|nothing|nothing"
     tkn = token(src)
-
+	@test tkn isa TokenAnnotation
     @test delimited(tkn) == src
 
 end
