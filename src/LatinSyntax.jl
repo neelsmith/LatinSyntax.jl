@@ -1,4 +1,5 @@
 module LatinSyntax
+using GreekSyntax
 using CitableText
 using CitableCorpus
 using Orthography, LatinOrthography
@@ -10,9 +11,9 @@ include("sentences.jl")
 include("verbalunit.jl")
 include("token.jl")
 
-export SentenceAnalysis, parsesentences, sentence
-export VerbalUnitAnalysis, verbalunit
-export TokenAnalysis, token
+export SentenceAnnotation, parsesentences, sentence
+export VerbalUnitAnnotation, verbalunit
+export TokenAnnotation, token
 
 export delimited
 
