@@ -17,6 +17,6 @@ end
 
 @testset "Test parsing a SentenceAnnotation from delimited source" begin
         src = "urn:cts:latinLit:stoa1263.stoa001.hc_tokens:108a.1.1-108a.1.28a|1|nothing"
-        sa =  nothing #sentence(src)
-        @test_broken sa isa SentenceAnnotation
+        sa =  sentence(src)
+        @test sa isa SentenceAnnotation
 end
