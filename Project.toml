@@ -1,7 +1,7 @@
 name = "LatinSyntax"
 uuid = "48187f9f-78ff-4060-b31e-d855612fbaec"
 authors = ["Neel Smith  <dnsmith.neel@gmail.com>"]
-version = "0.2.3"
+version = "0.2.4"
 
 [deps]
 CitableBase = "d6f014bd-995c-41bd-9893-703339864534"
@@ -22,7 +22,7 @@ CitableText = "0.15"
 DocStringExtensions = "0.9"
 Documenter = "0.27"
 GreekSyntax = "0.13"
-LatinOrthography = "0.5"
+LatinOrthography = "0.6"
 Orthography = "0.18"
 TestSetExtensions = "2"
 julia = "1"
