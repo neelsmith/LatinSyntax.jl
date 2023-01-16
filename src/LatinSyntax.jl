@@ -16,6 +16,7 @@ include("authlists.jl")
 include("sentences.jl")
 include("verbalunit.jl")
 include("token.jl")
+include("validation.jl")
 
 export SentenceAnnotation, parsesentences, sentence
 export VerbalUnitAnnotation, verbalunit

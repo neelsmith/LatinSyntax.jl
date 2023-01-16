@@ -1,7 +1,7 @@
 name = "LatinSyntax"
 uuid = "48187f9f-78ff-4060-b31e-d855612fbaec"
 authors = ["Neel Smith  <dnsmith.neel@gmail.com>"]
-version = "0.2.5"
+version = "0.3.0"
 
 [deps]
 CitableBase = "d6f014bd-995c-41bd-9893-703339864534"
@@ -12,6 +12,7 @@ Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 GreekSyntax = "5497687e-e4d1-4cb6-b14f-a6a808518ccd"
 LatinOrthography = "1e3032c9-fa1e-4efb-a2df-a06f238f6146"
 Orthography = "0b4c9448-09b0-4e78-95ea-3eb3328be36d"
+StringDistances = "88034a9c-02f8-509d-84a9-84ec65e18404"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 TestSetExtensions = "98d24dd4-01ad-11ea-1b02-c9a08f80db04"
 
@@ -24,5 +25,6 @@ Documenter = "0.27"
 GreekSyntax = "0.13"
 LatinOrthography = "0.6"
 Orthography = "0.18"
+StringDistances = "0.11"
 TestSetExtensions = "2"
 julia = "1"
