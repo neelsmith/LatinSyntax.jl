@@ -3,7 +3,7 @@ vutypes = [
     "independent clause",
     "subordinate clause",
     "indirect statement",
-    "circumstantial participle",
+    "participle",
     "gerundive",
     "supine",
     "quote",
