@@ -12,7 +12,7 @@ using Documenter
 using DocStringExtensions
 
 
-include("authlists.jl")
+
 include("sentences.jl")
 include("verbalunit.jl")
 include("token.jl")

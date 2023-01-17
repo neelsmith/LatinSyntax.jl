@@ -21,7 +21,7 @@ verbsemantics = [
 "Authority list for syntactic relation between tokens."
 syntaxrelations = [
     "conjunction", 
-    "subordinate conjunction", 
+    "subordinating word", 
 
     "unit verb", 
     "compound verb", 
@@ -41,7 +41,8 @@ syntaxrelations = [
     "attributive", 
     "object of preposition", 
     "genitive", 
-    "appositive" 
+    "appositive",
+    "pronoun"
     
 ]
 
@@ -49,7 +50,7 @@ syntaxrelations = [
 "Abbreviation dictionary for syntactic relations"
 syntaxdict = Dict(
     "op" => "object of preposition",
-    "sc" => "subordinate conjunction",
+    "sw" => "subordinating word",
     "o" => "object",
     "s" => "subject",
     "v" => "unit verb",
